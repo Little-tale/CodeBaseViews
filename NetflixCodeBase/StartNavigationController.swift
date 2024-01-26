@@ -11,18 +11,28 @@ class StartNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vc = ViewController()
-        print(#function)
+        
+        print(#function, "시작 네비게이션")
         self.navigationBar.isTranslucent = false
         view.backgroundColor = .clear
-        self.pushViewController(vc, animated: true)
+       
         self.navigationBar.backgroundColor = .clear
         self.navigationBar.tintColor = .black
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(.white)]
         
+        
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = ViewController()
+        self.pushViewController(vc, animated: false)
+    }
 
     
 
+}
+
+#Preview{
+    StartNavigationController()
 }

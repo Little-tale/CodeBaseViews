@@ -34,6 +34,15 @@ class ViewController: UIViewController {
     
     func navigationSetting(){
         navigationItem.title = "김재형씨"
+        
+        let rightBarItem = UIBarButtonItem(title: "다음", style: .plain, target: self , action: #selector(nextView))
+        rightBarItem.tintColor = .white
+        navigationItem.rightBarButtonItem = rightBarItem
+    }
+    
+    @objc func nextView(){
+        let vc = NewAndHotViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     func configualPosterView(){
         tableView.snp.makeConstraints { make in

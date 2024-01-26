@@ -20,6 +20,8 @@
 		7B7E0E2D2B638D47008D79B9 /* AllIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E0E2C2B638D47008D79B9 /* AllIdentifier.swift */; };
 		7B7E0E2F2B6399CC008D79B9 /* NeflixContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E0E2E2B6399CC008D79B9 /* NeflixContentsTableViewCell.swift */; };
 		7B7E0E322B63A521008D79B9 /* imagedata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E0E312B63A521008D79B9 /* imagedata.swift */; };
+		7B7E0E352B63B745008D79B9 /* NetflixTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E0E342B63B745008D79B9 /* NetflixTabBarViewController.swift */; };
+		7B7E0E382B63C1C0008D79B9 /* NewAndHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E0E372B63C1C0008D79B9 /* NewAndHotViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7B7E0E2C2B638D47008D79B9 /* AllIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIdentifier.swift; sourceTree = "<group>"; };
 		7B7E0E2E2B6399CC008D79B9 /* NeflixContentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeflixContentsTableViewCell.swift; sourceTree = "<group>"; };
 		7B7E0E312B63A521008D79B9 /* imagedata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagedata.swift; sourceTree = "<group>"; };
+		7B7E0E342B63B745008D79B9 /* NetflixTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTabBarViewController.swift; sourceTree = "<group>"; };
+		7B7E0E372B63C1C0008D79B9 /* NewAndHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAndHotViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		7B7E0E0A2B636D75008D79B9 /* NetflixCodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				7B7E0E362B63C1A8008D79B9 /* Second */,
+				7B7E0E332B63B6FB008D79B9 /* TabBar */,
 				7B7E0E302B63A514008D79B9 /* Data */,
 				7B7E0E292B638CAB008D79B9 /* cell */,
 				7B7E0E262B638A6E008D79B9 /* design */,
@@ -108,6 +114,22 @@
 				7B7E0E312B63A521008D79B9 /* imagedata.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7B7E0E332B63B6FB008D79B9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B7E0E342B63B745008D79B9 /* NetflixTabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7B7E0E362B63C1A8008D79B9 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				7B7E0E372B63C1C0008D79B9 /* NewAndHotViewController.swift */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +212,10 @@
 				7B7E0E322B63A521008D79B9 /* imagedata.swift in Sources */,
 				7B7E0E2D2B638D47008D79B9 /* AllIdentifier.swift in Sources */,
 				7B7E0E2F2B6399CC008D79B9 /* NeflixContentsTableViewCell.swift in Sources */,
+				7B7E0E382B63C1C0008D79B9 /* NewAndHotViewController.swift in Sources */,
 				7B7E0E252B636E56008D79B9 /* StartNavigationController.swift in Sources */,
 				7B7E0E102B636D75008D79B9 /* ViewController.swift in Sources */,
+				7B7E0E352B63B745008D79B9 /* NetflixTabBarViewController.swift in Sources */,
 				7B7E0E0C2B636D75008D79B9 /* AppDelegate.swift in Sources */,
 				7B7E0E0E2B636D75008D79B9 /* SceneDelegate.swift in Sources */,
 				7B7E0E282B638A98008D79B9 /* NetfliexMainPoster.swift in Sources */,
