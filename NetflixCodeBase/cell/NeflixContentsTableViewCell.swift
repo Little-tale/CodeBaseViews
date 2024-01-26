@@ -20,12 +20,11 @@ class NeflixContentsTableViewCell: UITableViewCell {
         print(#function)
         configualHierarchy()
         configualView()
-        self.backgroundColor = .green
-        secondImage.backgroundColor = .yellow
     }
     
     func configualHierarchy() {
         contentView.addSubview(stackView)
+        // MARK: - 2. addArrangerSubView!!!
         stackView.addArrangedSubview(firstImage)
         stackView.addArrangedSubview(secondImage)
         stackView.addArrangedSubview(thirdImage)
@@ -33,33 +32,28 @@ class NeflixContentsTableViewCell: UITableViewCell {
     func configualView() {
         stackView.snp.makeConstraints { make in
             make.verticalEdges.equalTo(contentView)
-            make.height.equalTo(140)
+            make.height.lessThanOrEqualTo(150)
+            make.height.greaterThanOrEqualTo(100)
             make.horizontalEdges.equalTo(contentView).inset(12)
+//            make.leading.equalTo(contentView).inset(12)
+//            make.trailing.equalTo(contentView).inset(-12)
+            
         }
+        
+        // MARK: - 1.
+        stackView.clipsToBounds = true
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
+        
         stackView.spacing = 24
         
-        firstImage.snp.makeConstraints { make in
-            //make.height.equalTo(60)
-            //make.width.equalTo(60)
-            
-        }
-        secondImage.snp.makeConstraints { make in
-            make.width.equalTo(firstImage)
-        }
-        thirdImage.snp.makeConstraints { make in
-            make.width.equalTo(firstImage)
-        }
-        
-        firstImage.backgroundColor = .lightGray
-        secondImage.backgroundColor = .orange
-        thirdImage.backgroundColor = .purple
-        
         firstImage.image = UIImage(named: images.Random)
+        firstImage.contentMode = .scaleAspectFill
         secondImage.image = UIImage(named: images.Random)
+        secondImage.contentMode = .scaleAspectFill
         thirdImage.image = UIImage(named: images.Random)
+        thirdImage.contentMode = .scaleAspectFill
     }
     
     required init?(coder: NSCoder) {

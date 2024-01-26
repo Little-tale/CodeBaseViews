@@ -17,7 +17,7 @@ class NefelixTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         print(#function)
-        contentView.backgroundColor = .red
+        // contentView.backgroundColor = .red
         configureHierarchy()
         configualPosterView()
         

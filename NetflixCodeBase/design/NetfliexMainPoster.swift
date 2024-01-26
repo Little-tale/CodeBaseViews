@@ -25,31 +25,32 @@ extension NefelixTableViewCell {
         posterView.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(contentView.safeAreaLayoutGuide).inset(24)
             make.top.bottom.equalTo(contentView.safeAreaLayoutGuide).inset(8)
-            make.height.equalTo(500)
-           
+            make.height.equalTo(480)
             
         }
         
         posterImageView.snp.makeConstraints { make in
             make.size.equalTo(posterView)
+            make.horizontalEdges.equalTo(posterView)
+            make.verticalEdges.equalTo(posterView)
+            
         }
         
         startButton.snp.makeConstraints { make in
-            make.horizontalEdges.equalTo(posterView.safeAreaLayoutGuide).inset(20).dividedBy(2)
-            make.bottom.equalTo(posterView.safeAreaLayoutGuide).inset(24)
+            make.horizontalEdges.equalTo(posterView).inset(20).dividedBy(2)
+            make.bottom.equalTo(posterView).inset(24)
             make.height.equalTo(40)
         }
         userSelectListButton.snp.makeConstraints { make in
             make.trailing.equalTo(posterView).inset(20)
             make.width.equalTo(startButton)
-            make.bottom.equalTo(posterView.safeAreaLayoutGuide).inset(24)
+            make.bottom.equalTo(posterView).inset(24)
             make.height.equalTo(40)
         }
         
         genreLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalTo(startButton.snp.top).inset(-12)
-            //make.horizontalEdges.greaterThanOrEqualTo(12)
             make.height.equalTo(20)
         }
         

@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         tableView.snp.makeConstraints { make in
             make.horizontalEdges.verticalEdges.equalTo(view.safeAreaLayoutGuide)
         }
-        tableView.backgroundColor = .blue
+        // tableView.backgroundColor = .blue
     }
     
     func configureHierarchy() {
