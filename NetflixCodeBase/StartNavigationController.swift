@@ -17,17 +17,15 @@ class StartNavigationController: UINavigationController {
         view.backgroundColor = .clear
        
         self.navigationBar.backgroundColor = .clear
-        self.navigationBar.tintColor = .black
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(.white)]
-        
+        self.navigationBar.tintColor = .white
         
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let vc = ViewController()
-        self.pushViewController(vc, animated: false)
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        let vc = ViewController()
+//        self.pushViewController(vc, animated: false)
+//    }
 
     
 

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class NewAndHotViewController: UITabBarController {
+class NewAndHotViewController: UIViewController {
     
     let searchBar = UISearchBar()
     let searchView = UIView()
@@ -34,6 +34,21 @@ class NewAndHotViewController: UITabBarController {
     
     func setNavi(){
         navigationItem.title = "NEW & HOT 검색"
+    
+        
+        
+        let rightBarButton = UIBarButtonItem(title: "다음", style: .plain, target: self, action: #selector(nextView))
+        let leftBarButton = UIBarButtonItem(title: "이전", style: .plain, target: self, action: #selector(beforeView))
+        
+        navigationItem.rightBarButtonItem = rightBarButton
+        navigationItem.leftBarButtonItem = leftBarButton
+    }
+    @objc func nextView(){
+        let vc = SaveContentsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc func beforeView() {
+        navigationController?.popViewController(animated: true)
     }
     
     func configureHierarchy() {

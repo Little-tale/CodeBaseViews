@@ -16,8 +16,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
      
         guard let scene = (scene as? UIWindowScene) else { return }
         
+        let tabBarCon = UITabBarController()
+        
+        let firstNavCont = StartNavigationController(rootViewController: ViewController())
+        firstNavCont.tabBarItem = UITabBarItem(title: "집", image: UIImage(systemName: "house"), tag: 0)
+        
+        let secondNavCont = StartNavigationController(rootViewController: NewAndHotViewController())
+        secondNavCont.tabBarItem = UITabBarItem(title: "NEW & HOT", image: UIImage(systemName: "photo.on.rectangle.angled"), tag: 1)
+        
+        let thirdNavCount = StartNavigationController(rootViewController: SaveContentsViewController())
+        thirdNavCount.tabBarItem = UITabBarItem(title: "저장한 콘텐츠 목록", image: UIImage(systemName: "square.and.arrow.down"), tag: 2)
+        
+        tabBarCon.viewControllers = [firstNavCont, secondNavCont, thirdNavCount]
+        tabBarCon.tabBar.tintColor = .white
+        
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = StartNavigationController()
+        window?.rootViewController = tabBarCon // StartNavigationController()
         window?.makeKeyAndVisible()
         
     }
