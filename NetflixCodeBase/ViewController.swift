@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     func configualPosterView(){
         tableView.snp.makeConstraints { make in
-            make.horizontalEdges.verticalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.horizontalEdges.verticalEdges.equalTo(view.safeAreaLayoutGuide).priority(.high)
         }
         // tableView.backgroundColor = .blue
     }

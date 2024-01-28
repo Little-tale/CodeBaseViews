@@ -32,12 +32,8 @@ class NeflixContentsTableViewCell: UITableViewCell {
     func configualView() {
         stackView.snp.makeConstraints { make in
             make.verticalEdges.equalTo(contentView)
-            make.height.lessThanOrEqualTo(150)
-            make.height.greaterThanOrEqualTo(100)
+            make.height.lessThanOrEqualTo(150).priority(999)
             make.horizontalEdges.equalTo(contentView).inset(12)
-//            make.leading.equalTo(contentView).inset(12)
-//            make.trailing.equalTo(contentView).inset(-12)
-            
         }
         
         // MARK: - 1.

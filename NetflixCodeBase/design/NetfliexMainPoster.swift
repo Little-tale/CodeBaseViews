@@ -25,7 +25,7 @@ extension NefelixTableViewCell {
         posterView.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(contentView.safeAreaLayoutGuide).inset(24)
             make.top.bottom.equalTo(contentView.safeAreaLayoutGuide).inset(8)
-            make.height.equalTo(480)
+            make.height.equalTo(480).priority(900)
             
         }
         
